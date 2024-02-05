@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
     port: 587,
     auth: {
       user: "adaobegginer@gmail.com",
-      pass: process.env.PASS,
+      pass: "----------",
     },
   });
 
