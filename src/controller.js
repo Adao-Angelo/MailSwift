@@ -9,15 +9,15 @@ class SendEmail {
       port: 587,
       secure: false,
       auth: {
-        user: "adaobegginer@gmail.com",
+        user: "gomesangelotest@gmail.com",
         pass: "------------",
       },
     });
 
     smtp
       .sendMail({
-        from: "	Adao Ângelo <adaobegginer@gmail.com> ",
-        to: "gomesangelotest@gmail.com",
+        from: "	Adao Ângelo <gomesangelotest@gmail.com> ",
+        to: "adaobegginer@gmail.com",
         subject: "hello I am Adão Angelo",
         text: "Olá este é um email de text para a minha api",
         html: "<a href='https://www.google.com'> Click aqui </a>",
