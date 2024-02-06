@@ -10,13 +10,13 @@ class SendEmail {
       secure: false,
       auth: {
         user: "adaobegginer@gmail.com",
-        pass: "deelangue",
+        pass: "------------",
       },
     });
 
     smtp
       .sendMail({
-        from: "Adao Ângelo <adaobegginer@gmail.com>",
+        from: "	Adao Ângelo <adaobegginer@gmail.com> ",
         to: "gomesangelotest@gmail.com",
         subject: "hello I am Adão Angelo",
         text: "Olá este é um email de text para a minha api",
