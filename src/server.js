@@ -1,34 +1,9 @@
-const express = require("express");
-const nodemailer = require("nodemailer");
+import express from "express";
+import { router } from "./router.js";
+
 const app = express();
 
-app.get("/", (req, res) => {
-  const smtp = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 587,
-    auth: {
-      user: "adaobegginer@gmail.com",
-      pass: "----------",
-    },
-  });
-
-  const configEmail = {
-    from: "adaobegginer@gmail.com",
-    to: "gomesangelotest@gmail.com",
-    replyTo: "gomesangelotest@gmail.com",
-    subject: "emplememting nodemail",
-    html: "<a src='www.facebool.com'> Opem Facebok</a>",
-  };
-
-  smtp
-    .sendMail(configEmail)
-    .then((info) => {
-      res.send(info);
-    })
-    .catch((error) => {
-      res.send(error);
-    });
-});
+app.use(router);
 
 app.listen(3000, () => {
   console.log("server is running at port 3000");
